@@ -14,6 +14,7 @@
 		58DE18441EC59C0C0017ADA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58DE18431EC59C0C0017ADA4 /* Assets.xcassets */; };
 		58DE18471EC59C0C0017ADA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DE18451EC59C0C0017ADA4 /* LaunchScreen.storyboard */; };
 		58DE184F1EC5A0760017ADA4 /* GetShopsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE184E1EC5A0760017ADA4 /* GetShopsInteractor.swift */; };
+		58DE18561EC5A1230017ADA4 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE18551EC5A1230017ADA4 /* Shop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		58DE18461EC59C0C0017ADA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58DE18481EC59C0C0017ADA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58DE184E1EC5A0760017ADA4 /* GetShopsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetShopsInteractor.swift; sourceTree = "<group>"; };
+		58DE18551EC5A1230017ADA4 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		58DE18531EC5A0E80017ADA4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				58DE18551EC5A1230017ADA4 /* Shop.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				58DE18421EC59C0C0017ADA4 /* KC_P6_MadridShopping.xcdatamodeld in Sources */,
 				58DE183C1EC59C0C0017ADA4 /* ViewController.swift in Sources */,
 				58DE183A1EC59C0C0017ADA4 /* AppDelegate.swift in Sources */,
+				58DE18561EC5A1230017ADA4 /* Shop.swift in Sources */,
 				58DE184F1EC5A0760017ADA4 /* GetShopsInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
