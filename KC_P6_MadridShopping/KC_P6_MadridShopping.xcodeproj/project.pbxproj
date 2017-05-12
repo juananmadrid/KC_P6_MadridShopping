@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		580473251EC5D468001D9FB6 /* JSONProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580473241EC5D468001D9FB6 /* JSONProcessing.swift */; };
+		580473271EC5EB50001D9FB6 /* AppLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 580473261EC5EB50001D9FB6 /* AppLogo.png */; };
 		58DE183A1EC59C0C0017ADA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE18391EC59C0C0017ADA4 /* AppDelegate.swift */; };
 		58DE183C1EC59C0C0017ADA4 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE183B1EC59C0C0017ADA4 /* MasterViewController.swift */; };
 		58DE183F1EC59C0C0017ADA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DE183D1EC59C0C0017ADA4 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		580473241EC5D468001D9FB6 /* JSONProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONProcessing.swift; sourceTree = "<group>"; };
+		580473261EC5EB50001D9FB6 /* AppLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppLogo.png; sourceTree = "<group>"; };
 		58DE18361EC59C0C0017ADA4 /* KC_P6_MadridShopping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KC_P6_MadridShopping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58DE18391EC59C0C0017ADA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58DE183B1EC59C0C0017ADA4 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				58DE18541EC5A0EE0017ADA4 /* Managers */,
 				58DE18521EC5A09B0017ADA4 /* Views */,
 				58DE18431EC59C0C0017ADA4 /* Assets.xcassets */,
+				580473261EC5EB50001D9FB6 /* AppLogo.png */,
 				58DE18481EC59C0C0017ADA4 /* Info.plist */,
 				58DE18401EC59C0C0017ADA4 /* KC_P6_MadridShopping.xcdatamodeld */,
 			);
@@ -182,6 +185,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				580473271EC5EB50001D9FB6 /* AppLogo.png in Resources */,
 				58DE18471EC59C0C0017ADA4 /* LaunchScreen.storyboard in Resources */,
 				58DE18441EC59C0C0017ADA4 /* Assets.xcassets in Resources */,
 				58DE183F1EC59C0C0017ADA4 /* Main.storyboard in Resources */,

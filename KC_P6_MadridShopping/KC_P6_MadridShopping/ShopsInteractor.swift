@@ -13,8 +13,8 @@ public class ShopsInteractor {
         self.init(manager: ShopAPIManager())
     }
 
-    public func execute(completion: @escaping (ShopArray) -> Void) {
-        manager.downloadJsonArray(completion: {(shopArray) in
+    public func execute(completion: @escaping (JsonArray) -> Void) {
+        manager.downloadJsonArray(completion: {(jsonArray) in
             assert(Thread.current == Thread.main)
         })
     }

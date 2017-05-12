@@ -4,6 +4,8 @@ class MasterViewController: UIViewController {
 
     // MARK: - Properties
     
+    var jsonArray: JsonArray!
+    
     @IBOutlet weak var appLogo: UIImageView!
     
     
@@ -20,7 +22,9 @@ class MasterViewController: UIViewController {
 
     @IBAction func goButton(_ sender: Any) {
         
-        ShopsInteractor()
+        ShopsInteractor().execute(completion: { (jsonArray: JsonArray) in
+            self.jsonArray = jsonArray
+        })
     }
     
     
@@ -37,7 +41,7 @@ class MasterViewController: UIViewController {
         
         assert(Thread.current == Thread.main)
         
-        appLogo.image = UIImage(named: "AppLogo")
+        appLogo.image = UIImage(named: "AppLogo.png")
     }
     
 }

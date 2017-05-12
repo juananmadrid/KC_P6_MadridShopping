@@ -1,14 +1,15 @@
 import UIKit
 
 public typealias JsonDictionary = Dictionary<String, Any>
-public typealias ArrayShops = [JsonDictionary]
+public typealias JsonDic = Dictionary<String, JsonDictionary>
+public typealias JsonArray = [JsonDictionary]
 public typealias ShopArray = [Shop]
 
 public typealias ErrorClosure = (Error) -> Void
 
 class ShopAPIManager {
 
-    public func downloadJsonArray(completion: @escaping (ShopArray) -> Void, onError: ErrorClosure? = nil) {
+    public func downloadJsonArray(completion: @escaping (JsonArray) -> Void, onError: ErrorClosure? = nil) {
         
         let urlString = "http://madrid-shops.com/json_new/getShops.php"
         
@@ -16,12 +17,12 @@ class ShopAPIManager {
             if let url = URL(string: urlString) {
                 do {
                     let data = try Data(contentsOf: url)
-                    let shopJson = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as!ArrayShops
+                    let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as!Dictionary<String, Any>
                     
-                    let shopArray = conversJsonDictArrayToShopArray(shopJson)
-                
+                    let jsonArray = json["result"]! as! JsonArray
+                    
                     DispatchQueue.main.async {
-                        completion(shopArray)
+                        completion(jsonArray)
                     }
                     
                 } catch {
