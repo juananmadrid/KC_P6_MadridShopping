@@ -22,11 +22,20 @@ class MasterViewController: UIViewController {
 
     @IBAction func goButton(_ sender: Any) {
         
-        ShopsInteractor().execute(completion: { (jsonArray: JsonArray) in
-            self.jsonArray = jsonArray
-        })
+        let defaults = UserDefaults.standard
+        let downloadEndFlag = defaults.bool(forKey: "ShopsDownloadEnd")
+        
+        if downloadEndFlag {
+            ShopsInteractor().execute(completion: { (jsonArray: JsonArray) in
+                self.jsonArray = jsonArray
+            })
+        
+        
+        /// Cargamos datos en CORE DATA
+        defaults.set(false, forKey: "ShopsDownloadEnd")
+        
+        }
     }
-    
     
 
 
@@ -44,5 +53,6 @@ class MasterViewController: UIViewController {
         appLogo.image = UIImage(named: "AppLogo.png")
     }
     
-}
 
+
+}

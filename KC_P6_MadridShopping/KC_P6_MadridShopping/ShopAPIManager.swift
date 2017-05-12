@@ -21,6 +21,8 @@ class ShopAPIManager {
                     
                     let jsonArray = json["result"]! as! JsonArray
                     
+                    self.flagShopsDownloadEnd(true)
+                    
                     DispatchQueue.main.async {
                         completion(jsonArray)
                     }
@@ -37,6 +39,10 @@ class ShopAPIManager {
         
     }
     
+    func flagShopsDownloadEnd(_ flag: Bool){
+        let defaults = UserDefaults.standard
+        defaults.set(flag, forKey: "ShopsDownloadEnd")
+    }
     
         
 }
