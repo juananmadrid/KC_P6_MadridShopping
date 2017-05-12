@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class Shop {
+public class Shop {
     
     let _name: String
     let _description_es: String
