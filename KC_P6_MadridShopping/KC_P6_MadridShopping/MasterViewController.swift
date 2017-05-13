@@ -1,10 +1,14 @@
 import UIKit
+import CoreData
 
 class MasterViewController: UIViewController {
 
     // MARK: - Properties
     
     var jsonArray: JsonArray!
+    
+    // Inyecto contexto desde AppDelegate
+    var managedObjectContext: NSManagedObjectContext? = nil
     
     @IBOutlet weak var appLogo: UIImageView!
     
@@ -31,13 +35,20 @@ class MasterViewController: UIViewController {
             })
         
         
-        /// Cargamos datos en CORE DATA
+        /// Reseteamos flag en Desarrollo
         defaults.set(false, forKey: "ShopsDownloadEnd")
         
         }
+        
+        /// Cargamos datos en CORE DATA
+        
+        
     }
     
 
+    
+    
+    
 
 
     

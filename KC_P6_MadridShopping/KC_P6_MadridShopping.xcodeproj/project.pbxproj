@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		580473251EC5D468001D9FB6 /* JSONProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580473241EC5D468001D9FB6 /* JSONProcessing.swift */; };
 		580473271EC5EB50001D9FB6 /* AppLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 580473261EC5EB50001D9FB6 /* AppLogo.png */; };
+		589042DE1EC6104C0093B853 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589042DD1EC6104C0093B853 /* CoreDataManager.swift */; };
 		58DE183A1EC59C0C0017ADA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE18391EC59C0C0017ADA4 /* AppDelegate.swift */; };
 		58DE183C1EC59C0C0017ADA4 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE183B1EC59C0C0017ADA4 /* MasterViewController.swift */; };
 		58DE183F1EC59C0C0017ADA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DE183D1EC59C0C0017ADA4 /* Main.storyboard */; };
@@ -18,12 +19,12 @@
 		58DE18561EC5A1230017ADA4 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE18551EC5A1230017ADA4 /* Shop.swift */; };
 		58DE18581EC5AA080017ADA4 /* ShopAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE18571EC5AA080017ADA4 /* ShopAPIManager.swift */; };
 		58DE185C1EC5AB150017ADA4 /* ShopsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE185B1EC5AB150017ADA4 /* ShopsInteractor.swift */; };
-		58DE185E1EC5AB730017ADA4 /* GetShopFromShopsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE185D1EC5AB730017ADA4 /* GetShopFromShopsInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		580473241EC5D468001D9FB6 /* JSONProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONProcessing.swift; sourceTree = "<group>"; };
 		580473261EC5EB50001D9FB6 /* AppLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppLogo.png; sourceTree = "<group>"; };
+		589042DD1EC6104C0093B853 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		58DE18361EC59C0C0017ADA4 /* KC_P6_MadridShopping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KC_P6_MadridShopping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58DE18391EC59C0C0017ADA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58DE183B1EC59C0C0017ADA4 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -35,7 +36,6 @@
 		58DE18551EC5A1230017ADA4 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		58DE18571EC5AA080017ADA4 /* ShopAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopAPIManager.swift; sourceTree = "<group>"; };
 		58DE185B1EC5AB150017ADA4 /* ShopsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopsInteractor.swift; sourceTree = "<group>"; };
-		58DE185D1EC5AB730017ADA4 /* GetShopFromShopsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetShopFromShopsInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				58DE185B1EC5AB150017ADA4 /* ShopsInteractor.swift */,
-				58DE185D1EC5AB730017ADA4 /* GetShopFromShopsInteractor.swift */,
 			);
 			name = Interactors;
 			sourceTree = "<group>";
@@ -121,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				58DE18571EC5AA080017ADA4 /* ShopAPIManager.swift */,
+				589042DD1EC6104C0093B853 /* CoreDataManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -199,12 +199,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58DE185E1EC5AB730017ADA4 /* GetShopFromShopsInteractor.swift in Sources */,
 				58DE18421EC59C0C0017ADA4 /* KC_P6_MadridShopping.xcdatamodeld in Sources */,
 				58DE183C1EC59C0C0017ADA4 /* MasterViewController.swift in Sources */,
 				58DE183A1EC59C0C0017ADA4 /* AppDelegate.swift in Sources */,
 				58DE18561EC5A1230017ADA4 /* Shop.swift in Sources */,
 				58DE185C1EC5AB150017ADA4 /* ShopsInteractor.swift in Sources */,
+				589042DE1EC6104C0093B853 /* CoreDataManager.swift in Sources */,
 				580473251EC5D468001D9FB6 /* JSONProcessing.swift in Sources */,
 				58DE18581EC5AA080017ADA4 /* ShopAPIManager.swift in Sources */,
 			);
