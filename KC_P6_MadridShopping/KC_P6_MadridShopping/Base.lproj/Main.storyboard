@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PCe-ka-P4v">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -36,6 +36,7 @@
                                 </state>
                                 <connections>
                                     <action selector="goButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AtJ-VE-B57"/>
+                                    <segue destination="Utn-hc-hjt" kind="show" identifier="ShopViewControllerSegue" id="kfY-XR-uPg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -47,13 +48,72 @@
                             <constraint firstItem="yku-NU-Izt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="83" id="bR1-RE-tvn"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="oeI-LR-HFl"/>
                     <connections>
                         <outlet property="appLogo" destination="yku-NU-Izt" id="ESF-7G-LnR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+            <point key="canvasLocation" x="2079.1999999999998" y="617.54122938530736"/>
+        </scene>
+        <!--Shop View Controller-->
+        <scene sceneID="qeA-7a-AwA">
+            <objects>
+                <viewController id="Utn-hc-hjt" customClass="ShopViewController" customModule="KC_P6_MadridShopping" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tc2-nT-NhT"/>
+                        <viewControllerLayoutGuide type="bottom" id="TiV-0b-GdS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qVs-zb-5yc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kFB-Qz-Iyn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PQc-x2-LdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3186" y="-33"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XBv-hY-aPZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="03O-dR-CL4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="REn-do-ErU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Utn-hc-hjt" kind="relationship" relationship="rootViewController" id="LYx-kg-UuA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="shn-8e-PR8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2329" y="-50"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="J3P-Ef-wJ6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PCe-ka-P4v" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7X2-er-qB3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nrD-wg-OER"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JGs-WQ-bjI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1140" y="617.54122938530736"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="kfY-XR-uPg"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -12,7 +12,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let controller = self.window?.rootViewController as! MasterViewController
+        
+        
         
         
         // CORE DATA STACK
@@ -25,8 +26,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Contexto
         self.context = container.viewContext
         
+        // Sin meter MasterViewController en un Navigation
+        // let controller = self.window?.rootViewController as! MasterViewController
         // Inyecto contexto en MasterViewController
-        controller.context = self.context
+        // controller.context = self.context
+        
+        // Con MasterViewController en un Navigation
+        if let navController = window?.rootViewController as? UINavigationController,
+            let initialViewController = navController.topViewController as? MasterViewController
+        {
+            initialViewController.context = self.context
+        }
         
         return true
     }

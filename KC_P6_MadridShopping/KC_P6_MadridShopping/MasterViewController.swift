@@ -24,6 +24,8 @@ class MasterViewController: UIViewController {
 
     @IBAction func goButton(_ sender: Any) {
         
+        guard let context = self.context else { return }
+        
         let defaults = UserDefaults.standard
         let downloadEndFlag = defaults.bool(forKey: "ShopsDownloadEnd")
         
@@ -40,22 +42,32 @@ class MasterViewController: UIViewController {
                 print("Error cargando Json. \(error)")
             }
             
-            
+            self.loadShopViewController()
         })
-        
-        
-        
-        
-        
         
     }
     
 
-    
-    
-    
-
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let defaults = UserDefaults.standard
+        let downloadEndFlag = defaults.bool(forKey: "ShopsDownloadEnd")
+        
+        if downloadEndFlag {
+            
+        } else {
+            print("Datos no cargados en Core Data")
+        }
+        
+        if let identifier = segue.identifier {
+            if identifier == "ShopViewControllerSegue" {
+                let vc = segue.destination as! ShopViewController
+                vc.context = self.context
+            }
+            
+           
+        }
+    }
     
     
     
@@ -69,6 +81,10 @@ class MasterViewController: UIViewController {
         appLogo.image = UIImage(named: "AppLogo.png")
     }
     
-
+    private func loadShopViewController() {
+        
+        
+        
+    }
 
 }
