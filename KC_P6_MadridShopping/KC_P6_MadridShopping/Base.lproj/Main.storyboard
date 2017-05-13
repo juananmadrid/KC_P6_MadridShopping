@@ -61,7 +61,7 @@
         <!--MadridShopping-->
         <scene sceneID="qeA-7a-AwA">
             <objects>
-                <viewController id="Utn-hc-hjt" customClass="ShopViewController" customModule="KC_P6_MadridShopping" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Utn-hc-hjt" customClass="ShopController" customModule="KC_P6_MadridShopping" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tc2-nT-NhT"/>
                         <viewControllerLayoutGuide type="bottom" id="TiV-0b-GdS"/>

@@ -61,7 +61,7 @@ class MasterViewController: UIViewController {
         
         if let identifier = segue.identifier {
             if identifier == "ShopViewControllerSegue" {
-                let vc = segue.destination as! ShopViewController
+                let vc = segue.destination as! ShopController
                 vc.context = self.context
             }
             

@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		580473271EC5EB50001D9FB6 /* AppLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 580473261EC5EB50001D9FB6 /* AppLogo.png */; };
-		5822F6931EC77F4700A7E815 /* ShopViewController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5822F6921EC77F4700A7E815 /* ShopViewController+UICollectionView.swift */; };
+		5822F6931EC77F4700A7E815 /* ShopController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5822F6921EC77F4700A7E815 /* ShopController+UICollectionView.swift */; };
 		5850547B1EC7182800A48DA7 /* LoadDataFromJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5850547A1EC7182800A48DA7 /* LoadDataFromJson.swift */; };
 		5850547D1EC7271F00A48DA7 /* DownloadImageManager .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5850547C1EC7271F00A48DA7 /* DownloadImageManager .swift */; };
-		5850547F1EC773A000A48DA7 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5850547E1EC773A000A48DA7 /* ShopViewController.swift */; };
+		5850547F1EC773A000A48DA7 /* ShopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5850547E1EC773A000A48DA7 /* ShopController.swift */; };
 		585054811EC777B100A48DA7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585054801EC777B100A48DA7 /* DetailViewController.swift */; };
 		5874D1FE1EC78D4F00795F9E /* ShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5874D1FD1EC78D4F00795F9E /* ShopCell.swift */; };
+		5874D2001EC79BED00795F9E /* ShopCotroller+NSFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5874D1FF1EC79BED00795F9E /* ShopCotroller+NSFetchResultController.swift */; };
+		5874D2021EC79F3C00795F9E /* Shop+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5874D2011EC79F3C00795F9E /* Shop+Utils.swift */; };
 		589042DE1EC6104C0093B853 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589042DD1EC6104C0093B853 /* CoreDataManager.swift */; };
 		58DE183A1EC59C0C0017ADA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE18391EC59C0C0017ADA4 /* AppDelegate.swift */; };
 		58DE183C1EC59C0C0017ADA4 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE183B1EC59C0C0017ADA4 /* MasterViewController.swift */; };
@@ -27,12 +29,14 @@
 
 /* Begin PBXFileReference section */
 		580473261EC5EB50001D9FB6 /* AppLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppLogo.png; sourceTree = "<group>"; };
-		5822F6921EC77F4700A7E815 /* ShopViewController+UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ShopViewController+UICollectionView.swift"; sourceTree = "<group>"; };
+		5822F6921EC77F4700A7E815 /* ShopController+UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ShopController+UICollectionView.swift"; sourceTree = "<group>"; };
 		5850547A1EC7182800A48DA7 /* LoadDataFromJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadDataFromJson.swift; sourceTree = "<group>"; };
 		5850547C1EC7271F00A48DA7 /* DownloadImageManager .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DownloadImageManager .swift"; sourceTree = "<group>"; };
-		5850547E1EC773A000A48DA7 /* ShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		5850547E1EC773A000A48DA7 /* ShopController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopController.swift; sourceTree = "<group>"; };
 		585054801EC777B100A48DA7 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5874D1FD1EC78D4F00795F9E /* ShopCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopCell.swift; sourceTree = "<group>"; };
+		5874D1FF1EC79BED00795F9E /* ShopCotroller+NSFetchResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ShopCotroller+NSFetchResultController.swift"; sourceTree = "<group>"; };
+		5874D2011EC79F3C00795F9E /* Shop+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Shop+Utils.swift"; sourceTree = "<group>"; };
 		589042DD1EC6104C0093B853 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		58DE18361EC59C0C0017ADA4 /* KC_P6_MadridShopping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KC_P6_MadridShopping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58DE18391EC59C0C0017ADA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,8 +64,9 @@
 		5822F6941EC77F5200A7E815 /* Shop */ = {
 			isa = PBXGroup;
 			children = (
-				5850547E1EC773A000A48DA7 /* ShopViewController.swift */,
-				5822F6921EC77F4700A7E815 /* ShopViewController+UICollectionView.swift */,
+				5850547E1EC773A000A48DA7 /* ShopController.swift */,
+				5822F6921EC77F4700A7E815 /* ShopController+UICollectionView.swift */,
+				5874D1FF1EC79BED00795F9E /* ShopCotroller+NSFetchResultController.swift */,
 			);
 			name = Shop;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 		58DE18531EC5A0E80017ADA4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5874D2011EC79F3C00795F9E /* Shop+Utils.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -229,15 +235,17 @@
 			files = (
 				58DE18421EC59C0C0017ADA4 /* KC_P6_MadridShopping.xcdatamodeld in Sources */,
 				58DE183C1EC59C0C0017ADA4 /* MasterViewController.swift in Sources */,
-				5850547F1EC773A000A48DA7 /* ShopViewController.swift in Sources */,
+				5850547F1EC773A000A48DA7 /* ShopController.swift in Sources */,
 				58DE183A1EC59C0C0017ADA4 /* AppDelegate.swift in Sources */,
 				58DE185C1EC5AB150017ADA4 /* ShopsInteractor.swift in Sources */,
 				5850547D1EC7271F00A48DA7 /* DownloadImageManager .swift in Sources */,
 				5850547B1EC7182800A48DA7 /* LoadDataFromJson.swift in Sources */,
 				5874D1FE1EC78D4F00795F9E /* ShopCell.swift in Sources */,
-				5822F6931EC77F4700A7E815 /* ShopViewController+UICollectionView.swift in Sources */,
+				5822F6931EC77F4700A7E815 /* ShopController+UICollectionView.swift in Sources */,
 				585054811EC777B100A48DA7 /* DetailViewController.swift in Sources */,
 				589042DE1EC6104C0093B853 /* CoreDataManager.swift in Sources */,
+				5874D2021EC79F3C00795F9E /* Shop+Utils.swift in Sources */,
+				5874D2001EC79BED00795F9E /* ShopCotroller+NSFetchResultController.swift in Sources */,
 				58DE18581EC5AA080017ADA4 /* ShopAPIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
