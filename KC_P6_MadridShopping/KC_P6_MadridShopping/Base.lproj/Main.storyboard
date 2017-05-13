@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -57,7 +58,7 @@
             </objects>
             <point key="canvasLocation" x="2079.1999999999998" y="617.54122938530736"/>
         </scene>
-        <!--Shop View Controller-->
+        <!--MadridShopping-->
         <scene sceneID="qeA-7a-AwA">
             <objects>
                 <viewController id="Utn-hc-hjt" customClass="ShopViewController" customModule="KC_P6_MadridShopping" customModuleProvider="target" sceneMemberID="viewController">
@@ -68,13 +69,68 @@
                     <view key="view" contentMode="scaleToFill" id="qVs-zb-5yc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZL8-gm-peN">
+                                <rect key="frame" x="0.0" y="329" width="375" height="338"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FQk-86-l8j">
+                                    <size key="itemSize" width="375" height="72"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShopCell" id="CYR-tM-7p9">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m43-uQ-aLG">
+                                                    <rect key="frame" x="0.0" y="5" width="375" height="59"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ITE-Uo-SN4">
+                                                    <rect key="frame" x="8" y="8" width="62" height="54"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2R-OW-nYk">
+                                                    <rect key="frame" x="87" y="25" width="269" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="ITE-Uo-SN4" firstAttribute="centerY" secondItem="CYR-tM-7p9" secondAttribute="centerY" id="ZOH-Kc-WpI"/>
+                                            <constraint firstItem="m43-uQ-aLG" firstAttribute="centerX" secondItem="CYR-tM-7p9" secondAttribute="centerX" id="cXZ-wz-Qoe"/>
+                                            <constraint firstItem="m43-uQ-aLG" firstAttribute="width" secondItem="CYR-tM-7p9" secondAttribute="width" id="dFa-qV-HLo"/>
+                                            <constraint firstItem="m43-uQ-aLG" firstAttribute="height" secondItem="CYR-tM-7p9" secondAttribute="height" id="ed1-0G-SaQ"/>
+                                            <constraint firstItem="u2R-OW-nYk" firstAttribute="centerY" secondItem="CYR-tM-7p9" secondAttribute="centerY" id="inZ-DA-IiK"/>
+                                            <constraint firstItem="u2R-OW-nYk" firstAttribute="leading" secondItem="CYR-tM-7p9" secondAttribute="leadingMargin" constant="93" id="kcy-Uz-Spy"/>
+                                            <constraint firstAttribute="leadingMargin" secondItem="ITE-Uo-SN4" secondAttribute="leading" id="tUT-nN-X75"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Utn-hc-hjt" id="ieS-Bt-37Y"/>
+                                    <outlet property="delegate" destination="Utn-hc-hjt" id="3VA-7D-Nuz"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ZL8-gm-peN" secondAttribute="trailing" id="416-4D-FyX"/>
+                            <constraint firstItem="TiV-0b-GdS" firstAttribute="top" secondItem="ZL8-gm-peN" secondAttribute="bottom" id="NCu-DM-BF2"/>
+                            <constraint firstItem="ZL8-gm-peN" firstAttribute="leading" secondItem="qVs-zb-5yc" secondAttribute="leading" id="a4e-VK-Kr5"/>
+                            <constraint firstItem="ZL8-gm-peN" firstAttribute="top" secondItem="tc2-nT-NhT" secondAttribute="bottom" constant="265" id="hB3-K8-vYu"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="kFB-Qz-Iyn"/>
+                    <navigationItem key="navigationItem" title="MadridShopping" id="kFB-Qz-Iyn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PQc-x2-LdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3186" y="-33"/>
+            <point key="canvasLocation" x="3184.8000000000002" y="-33.733133433283363"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XBv-hY-aPZ">
