@@ -12,13 +12,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let controller = MasterViewController()
+        let controller = self.window?.rootViewController as! MasterViewController
         
         
         // CORE DATA STACK
         
         // Persisten Container
-        let container = persistentContainer(dbName: "MadridShopping") { (error: NSError) in
+        let container = persistentContainer(dbName: "KC_P6_MadridShopping") { (error: NSError) in
             fatalError("Unresolved error \(error), \(error.userInfo)")
         }
         
@@ -26,10 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.context = container.viewContext
         
         // Inyecto contexto en MasterViewController
-        controller.managedObjectContext = self.context
-        
-        
-        
+        controller.context = self.context
         
         return true
     }

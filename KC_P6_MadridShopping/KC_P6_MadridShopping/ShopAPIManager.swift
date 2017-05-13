@@ -1,7 +1,6 @@
 import UIKit
 
 public typealias JsonDictionary = Dictionary<String, Any>
-public typealias JsonDic = Dictionary<String, JsonDictionary>
 public typealias JsonArray = [JsonDictionary]
 public typealias ShopArray = [Shop]
 

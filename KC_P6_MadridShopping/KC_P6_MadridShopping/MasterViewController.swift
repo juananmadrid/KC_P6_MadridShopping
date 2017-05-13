@@ -1,14 +1,13 @@
 import UIKit
 import CoreData
 
+
 class MasterViewController: UIViewController {
 
     // MARK: - Properties
     
-    var jsonArray: JsonArray!
-    
     // Inyecto contexto desde AppDelegate
-    var managedObjectContext: NSManagedObjectContext? = nil
+    var context: NSManagedObjectContext?
     
     @IBOutlet weak var appLogo: UIImageView!
     
@@ -22,25 +21,31 @@ class MasterViewController: UIViewController {
 
     
     // MARK: - Actions
-    
 
     @IBAction func goButton(_ sender: Any) {
         
         let defaults = UserDefaults.standard
         let downloadEndFlag = defaults.bool(forKey: "ShopsDownloadEnd")
         
-        if downloadEndFlag {
-            ShopsInteractor().execute(completion: { (jsonArray: JsonArray) in
-                self.jsonArray = jsonArray
-            })
+        /// flag en Desarrollo
+        if downloadEndFlag { }
+        // defaults.set(false, forKey: "ShopsDownloadEnd")
+        
+        ShopsInteractor().execute(completion: { (jsonArray: JsonArray) in
+            
+            // Cargamos datos en CORE DATA
+            do{
+                try uploadJson(jsonArray: jsonArray, context: self.context!)
+            } catch {
+                print("Error cargando Json. \(error)")
+            }
+            
+            
+        })
         
         
-        /// Reseteamos flag en Desarrollo
-        defaults.set(false, forKey: "ShopsDownloadEnd")
         
-        }
         
-        /// Cargamos datos en CORE DATA
         
         
     }

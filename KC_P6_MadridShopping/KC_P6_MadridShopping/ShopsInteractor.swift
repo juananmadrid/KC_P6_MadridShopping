@@ -16,6 +16,10 @@ public class ShopsInteractor {
     public func execute(completion: @escaping (JsonArray) -> Void) {
         manager.downloadJsonArray(completion: {(jsonArray) in
             assert(Thread.current == Thread.main)
+            
+            DispatchQueue.main.async {
+                completion(jsonArray)
+            }
         })
     }
         
