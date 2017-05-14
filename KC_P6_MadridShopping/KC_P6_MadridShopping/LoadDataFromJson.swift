@@ -7,7 +7,6 @@ enum JSONErrors : Error{
     case noData(name:String)
     case invalidData(name: String, value: String)
     case wrongURLFormatForJSONResource
-    
     case emptyJSONObject
     case emptyJSONArray
 }
@@ -46,8 +45,8 @@ public func uploadShop(dict: JsonDictionary, context: NSManagedObjectContext) th
         downloadImage(urlString: urlString_logo, completion: { (image) in
             let img_logo = NSData(data: UIImageJPEGRepresentation(image, 0.2)!)
             
-            downloadImage(urlString: urlStringLocation, completion: { (image) in
-                let imgLocation = NSData(data: UIImageJPEGRepresentation(image, 0.3)!)
+            // downloadImage(urlString: urlStringLocation, completion: { (image) in
+            //    let imgLocation = NSData(data: UIImageJPEGRepresentation(image, 0.3)!)
                 
                 
                 // Cargamos datos en Core Data
@@ -61,10 +60,10 @@ public func uploadShop(dict: JsonDictionary, context: NSManagedObjectContext) th
                 shop.description_en = description_en
                 shop.image_back = img
                 shop.image_logo = img_logo
-                shop.imageLocation = imgLocation
+                // shop.imageLocation = imgLocation
                 
                 saveContext(context: context)
-            })
+            // })
         })
     })
     

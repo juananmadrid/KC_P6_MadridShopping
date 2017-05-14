@@ -26,7 +26,7 @@ class MasterViewController: UIViewController {
         let downloadEndFlag = defaults.bool(forKey: "ShopsDownloadEnd")
         
         // Flag para no descargar si ya está descargado antes
-         if !downloadEndFlag {
+        if !downloadEndFlag {
         
             ShopsInteractor().execute(completion: { (jsonArray: JsonArray) in
                 

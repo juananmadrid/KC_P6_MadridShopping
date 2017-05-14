@@ -40,29 +40,13 @@
                                     <segue destination="Utn-hc-hjt" kind="show" identifier="ShopViewControllerSegue" id="xPr-Sz-Ven"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDb-P2-v12">
-                                <rect key="frame" x="27" y="83" width="310" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="220" id="6EE-Qh-toK"/>
-                                    <constraint firstAttribute="height" constant="30" id="tg4-Qf-VBY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                <state key="normal" title="Madrid Shopping">
-                                    <color key="titleColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="goButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="STs-Sy-w17"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xi4-GC-J6M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3kw-jy-bhv"/>
                             <constraint firstItem="yku-NU-Izt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MjL-WK-H3j"/>
-                            <constraint firstItem="IDb-P2-v12" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O1D-qk-wgK"/>
                             <constraint firstItem="xi4-GC-J6M" firstAttribute="top" secondItem="yku-NU-Izt" secondAttribute="bottom" constant="75" id="ZyE-cU-kGh"/>
                             <constraint firstItem="yku-NU-Izt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="130" id="bR1-RE-tvn"/>
-                            <constraint firstItem="IDb-P2-v12" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="19" id="jBE-1T-I4a"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oeI-LR-HFl"/>

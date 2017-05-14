@@ -34,4 +34,18 @@ Resaltar también que no he conseguido que la parte de arriba de la Collection V
 
 Para alguien que nunca antes de este máster ha programado nada me ha costado lo suyo llegar hasta aquí. No obstante, seguiré trabajando en los próximos días para acabar las funcionalidades pendientes. No sé después de esta fecha habrá o no posibilidad de su corrección o no, pero en cualauier caso al menos quiero terminarla para aprender todo lo que conlleva.  
 
+PROBLEMAS DE ÚLTIMA HORA
+-----------------------------------------------
+
+He notado que a veces al cambiar de dispositivo para ver que funciona bien no me carga bien los datos de Core Data. Me hace un par de días y cambié algunas cosas y no me había vuelto a pasar hasta esta tarde. Incluoso a veces no carga ni la CollectionView.
+
+Después de chequear todo el proyecto de arriba a abajo he observado que omitiendo el código de la descarga de la imagen de localización de la vista en detalle parece funcionar bien, así que lo dejo comentado porque no me da tiempo a chequear mucho más y al menos quiero que se pueda ver lo que he hecho. 
+
+Si diera algún problema y no mostrara la Collection View, siempre puedes ir algunos commit hacia atrás que seguro se cargará al menos lo que había hecho hasta entonces. Disculpa las molestias si fuera necesario.
+
+
+
+
+
+
 
