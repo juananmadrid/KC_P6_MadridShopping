@@ -5,6 +5,7 @@ import CoreData
 class ShopController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var map: UIImageView!
     
     var context: NSManagedObjectContext?
     var _fetchedResultsController: NSFetchedResultsController<Shop>? = nil
@@ -12,6 +13,7 @@ class ShopController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        map.image = UIImage(named: "madrid.png")
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -40,13 +40,29 @@
                                     <segue destination="Utn-hc-hjt" kind="show" identifier="ShopViewControllerSegue" id="xPr-Sz-Ven"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDb-P2-v12">
+                                <rect key="frame" x="27" y="83" width="310" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="6EE-Qh-toK"/>
+                                    <constraint firstAttribute="height" constant="30" id="tg4-Qf-VBY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <state key="normal" title="Madrid Shopping">
+                                    <color key="titleColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="STs-Sy-w17"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xi4-GC-J6M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3kw-jy-bhv"/>
                             <constraint firstItem="yku-NU-Izt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MjL-WK-H3j"/>
+                            <constraint firstItem="IDb-P2-v12" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O1D-qk-wgK"/>
                             <constraint firstItem="xi4-GC-J6M" firstAttribute="top" secondItem="yku-NU-Izt" secondAttribute="bottom" constant="75" id="ZyE-cU-kGh"/>
-                            <constraint firstItem="yku-NU-Izt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="83" id="bR1-RE-tvn"/>
+                            <constraint firstItem="yku-NU-Izt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="130" id="bR1-RE-tvn"/>
+                            <constraint firstItem="IDb-P2-v12" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="19" id="jBE-1T-I4a"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oeI-LR-HFl"/>
@@ -199,18 +215,33 @@
                                     <outlet property="delegate" destination="Utn-hc-hjt" id="3VA-7D-Nuz"/>
                                 </connections>
                             </collectionView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W92-c4-1bv">
+                                <rect key="frame" x="0.0" y="64" width="375" height="267"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="267" id="VFB-Ch-Jfp"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="W92-c4-1bv" firstAttribute="leading" secondItem="qVs-zb-5yc" secondAttribute="leading" id="2ml-Ar-j1T"/>
                             <constraint firstAttribute="trailing" secondItem="ZL8-gm-peN" secondAttribute="trailing" id="416-4D-FyX"/>
                             <constraint firstItem="TiV-0b-GdS" firstAttribute="top" secondItem="ZL8-gm-peN" secondAttribute="bottom" id="NCu-DM-BF2"/>
+                            <constraint firstItem="W92-c4-1bv" firstAttribute="top" secondItem="tc2-nT-NhT" secondAttribute="bottom" id="Qm2-gk-BJb"/>
+                            <constraint firstItem="W92-c4-1bv" firstAttribute="leading" secondItem="qVs-zb-5yc" secondAttribute="leading" id="Rxb-Fy-Jfn"/>
+                            <constraint firstItem="W92-c4-1bv" firstAttribute="top" secondItem="tc2-nT-NhT" secondAttribute="bottom" id="ZPy-dq-JwB"/>
+                            <constraint firstItem="W92-c4-1bv" firstAttribute="top" secondItem="tc2-nT-NhT" secondAttribute="bottom" id="ZV3-fR-Mcj"/>
                             <constraint firstItem="ZL8-gm-peN" firstAttribute="leading" secondItem="qVs-zb-5yc" secondAttribute="leading" id="a4e-VK-Kr5"/>
+                            <constraint firstAttribute="trailing" secondItem="W92-c4-1bv" secondAttribute="trailing" id="aNc-0W-lqz"/>
+                            <constraint firstAttribute="trailing" secondItem="W92-c4-1bv" secondAttribute="trailing" id="apC-1Q-jCa"/>
+                            <constraint firstItem="W92-c4-1bv" firstAttribute="top" secondItem="tc2-nT-NhT" secondAttribute="bottom" id="hAs-dD-dMQ"/>
                             <constraint firstItem="ZL8-gm-peN" firstAttribute="top" secondItem="tc2-nT-NhT" secondAttribute="bottom" constant="265" id="hB3-K8-vYu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="MadridShopping" id="kFB-Qz-Iyn"/>
                     <connections>
                         <outlet property="collectionView" destination="ZL8-gm-peN" id="t0F-Wp-Kjc"/>
+                        <outlet property="map" destination="W92-c4-1bv" id="qH6-c2-pJb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PQc-x2-LdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
