@@ -58,6 +58,68 @@
             </objects>
             <point key="canvasLocation" x="2079.1999999999998" y="617.54122938530736"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="UiN-2e-Dk2">
+            <objects>
+                <viewController id="uU4-qh-ShE" customClass="DetailViewController" customModule="KC_P6_MadridShopping" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BDW-Hc-jSh"/>
+                        <viewControllerLayoutGuide type="bottom" id="NrV-dF-o0m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hBY-aG-41i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O3b-Tq-L8j">
+                                <rect key="frame" x="0.0" y="64" width="375" height="191"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIU-5Q-1oO">
+                                <rect key="frame" x="29" y="276" width="316" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZg-kx-8cX">
+                                <rect key="frame" x="29" y="323" width="316" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" lineBreakMode="tailTruncation" numberOfLines="16" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZX-sV-ewg">
+                                <rect key="frame" x="29" y="370" width="316" height="277"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="O3b-Tq-L8j" secondAttribute="trailing" id="1pa-Fe-rfH"/>
+                            <constraint firstItem="O3b-Tq-L8j" firstAttribute="leading" secondItem="hBY-aG-41i" secondAttribute="leading" id="5wE-UA-LA6"/>
+                            <constraint firstItem="SIU-5Q-1oO" firstAttribute="leading" secondItem="hBY-aG-41i" secondAttribute="leadingMargin" constant="13" id="7zf-09-ObS"/>
+                            <constraint firstItem="kZg-kx-8cX" firstAttribute="width" secondItem="SIU-5Q-1oO" secondAttribute="width" id="8DD-a6-KJp"/>
+                            <constraint firstItem="kZg-kx-8cX" firstAttribute="leading" secondItem="SIU-5Q-1oO" secondAttribute="leading" id="8EG-8a-Hcg"/>
+                            <constraint firstItem="GZX-sV-ewg" firstAttribute="top" secondItem="kZg-kx-8cX" secondAttribute="bottom" constant="45" id="8UB-K1-nhR"/>
+                            <constraint firstItem="GZX-sV-ewg" firstAttribute="top" secondItem="kZg-kx-8cX" secondAttribute="bottom" constant="26" id="8k6-Xw-pSU"/>
+                            <constraint firstItem="kZg-kx-8cX" firstAttribute="top" secondItem="SIU-5Q-1oO" secondAttribute="bottom" constant="23" id="AxG-cU-ki6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GZX-sV-ewg" secondAttribute="trailing" constant="14" id="Fp3-vf-Fde"/>
+                            <constraint firstItem="GZX-sV-ewg" firstAttribute="leading" secondItem="kZg-kx-8cX" secondAttribute="leading" id="K5Y-fg-Kx6"/>
+                            <constraint firstItem="GZX-sV-ewg" firstAttribute="width" secondItem="kZg-kx-8cX" secondAttribute="width" id="T3v-Bl-wS1"/>
+                            <constraint firstItem="SIU-5Q-1oO" firstAttribute="top" secondItem="BDW-Hc-jSh" secondAttribute="bottom" constant="212" id="nIo-eG-ZCH"/>
+                            <constraint firstItem="GZX-sV-ewg" firstAttribute="leading" secondItem="hBY-aG-41i" secondAttribute="leadingMargin" constant="13" id="nK4-8X-wgH"/>
+                            <constraint firstItem="O3b-Tq-L8j" firstAttribute="top" secondItem="BDW-Hc-jSh" secondAttribute="bottom" id="pma-hx-PHD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="address" destination="kZg-kx-8cX" id="SFm-gF-cr3"/>
+                        <outlet property="descript" destination="GZX-sV-ewg" id="XjV-3H-jQb"/>
+                        <outlet property="name" destination="SIU-5Q-1oO" id="RlC-HI-NAR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bpy-Z8-UGV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3376.8000000000002" y="689.5052473763119"/>
+        </scene>
         <!--MadridShopping-->
         <scene sceneID="qeA-7a-AwA">
             <objects>
@@ -100,7 +162,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2R-OW-nYk">
                                                     <rect key="frame" x="87" y="25" width="269" height="22"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -118,6 +180,7 @@
                                             <outlet property="image" destination="m43-uQ-aLG" id="wCZ-Qu-U6j"/>
                                             <outlet property="image_logo" destination="ITE-Uo-SN4" id="RfA-FP-Mok"/>
                                             <outlet property="name" destination="u2R-OW-nYk" id="iCC-43-27B"/>
+                                            <segue destination="uU4-qh-ShE" kind="show" identifier="ShopDetailSegue" id="3td-9p-6sN"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -136,6 +199,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="MadridShopping" id="kFB-Qz-Iyn"/>
+                    <connections>
+                        <outlet property="collectionView" destination="ZL8-gm-peN" id="t0F-Wp-Kjc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PQc-x2-LdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
