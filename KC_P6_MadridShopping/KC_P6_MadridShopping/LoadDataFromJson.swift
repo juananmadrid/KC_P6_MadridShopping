@@ -36,6 +36,7 @@ public func uploadShop(dict: JsonDictionary, context: NSManagedObjectContext) th
     let description_es = dict["description_es"] as! String
     let description_en = dict["description_en"] as! String
     
+    let urlStringLocation = "http://maps.googleapis.com/maps/api/staticmap? center=\(gps_lat),\(gps_lon)&zoom=17&size=320x220&scale=2&markers=%7Ccolor:0x9C7B14%7C\(gps_lat),\(gps_lon)"
 
     // Descargamos imagenes
     
@@ -45,19 +46,25 @@ public func uploadShop(dict: JsonDictionary, context: NSManagedObjectContext) th
         downloadImage(urlString: urlString_logo, completion: { (image) in
             let img_logo = NSData(data: UIImageJPEGRepresentation(image, 0.2)!)
             
-            // Cargamos datos en Core Data
-            let shop = Shop(context: context)
-            shop.id = id
-            shop.name = name
-            shop.address = address
-            shop.gps_lon = gps_lon
-            shop.gps_lat = gps_lat
-            shop.description_es = description_es
-            shop.description_en = description_en
-            shop.image_back = img
-            shop.image_logo = img_logo
-            
-            saveContext(context: context)
+            downloadImage(urlString: urlStringLocation, completion: { (image) in
+                let imgLocation = NSData(data: UIImageJPEGRepresentation(image, 0.3)!)
+                
+                
+                // Cargamos datos en Core Data
+                let shop = Shop(context: context)
+                shop.id = id
+                shop.name = name
+                shop.address = address
+                shop.gps_lon = gps_lon
+                shop.gps_lat = gps_lat
+                shop.description_es = description_es
+                shop.description_en = description_en
+                shop.image_back = img
+                shop.image_logo = img_logo
+                shop.imageLocation = imgLocation
+                
+                saveContext(context: context)
+            })
         })
     })
     
