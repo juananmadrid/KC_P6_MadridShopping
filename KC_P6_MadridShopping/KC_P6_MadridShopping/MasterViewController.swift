@@ -42,7 +42,6 @@ class MasterViewController: UIViewController {
                 print("Error cargando Json. \(error)")
             }
             
-            self.loadShopViewController()
         })
         
     }
@@ -81,10 +80,5 @@ class MasterViewController: UIViewController {
         appLogo.image = UIImage(named: "AppLogo.png")
     }
     
-    private func loadShopViewController() {
-        
-        
-        
-    }
 
 }

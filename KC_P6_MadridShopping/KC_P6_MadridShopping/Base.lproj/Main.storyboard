@@ -80,7 +80,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShopCell" id="CYR-tM-7p9">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShopCell" id="CYR-tM-7p9" customClass="ShopCell" customModule="KC_P6_MadridShopping" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -110,6 +110,11 @@
                                             <constraint firstItem="u2R-OW-nYk" firstAttribute="leading" secondItem="CYR-tM-7p9" secondAttribute="leadingMargin" constant="93" id="kcy-Uz-Spy"/>
                                             <constraint firstAttribute="leadingMargin" secondItem="ITE-Uo-SN4" secondAttribute="leading" id="tUT-nN-X75"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="image" destination="m43-uQ-aLG" id="wCZ-Qu-U6j"/>
+                                            <outlet property="image_logo" destination="ITE-Uo-SN4" id="RfA-FP-Mok"/>
+                                            <outlet property="name" destination="u2R-OW-nYk" id="iCC-43-27B"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>

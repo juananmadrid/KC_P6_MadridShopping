@@ -18,7 +18,7 @@ public func uploadShop(dict: JsonDictionary, context: NSManagedObjectContext) th
     
     // Validamos datos
     
-    // try validate(dictionary: dict)
+    try validate(dictionary: dict)
     
     guard let urlString_image = dict["img"] as? String,
         let urlString_logo = dict["logo_img"] as? String
@@ -58,7 +58,7 @@ public func uploadShop(dict: JsonDictionary, context: NSManagedObjectContext) th
             shop.image = img
             shop.logo = img_logo
             
-            saveContext(context: context)
+            
             
         })
     })
@@ -74,7 +74,7 @@ public func uploadJson(jsonArray: JsonArray, context: NSManagedObjectContext) th
         try uploadShop(dict: shop , context: context)
     }
     
-    
+    saveContext(context: context)
 }
 
 
