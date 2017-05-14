@@ -18,8 +18,14 @@ class ShopCell: UICollectionViewCell {
             _shop = newValue
             
             name.text = newValue.name
-            // image_logo.image = newValue.logo
-            // image.image = newValue.image
+            
+        
+            let imageLogo = newValue.img_logo as? Data ?? UIImagePNGRepresentation(UIImage(named: "IconDefault.png")!)
+            let imageData = newValue.img_back as? Data ?? UIImagePNGRepresentation(UIImage(named: "BackgroundDefault.jpg")!)
+            
+            image_logo.image  = UIImage(data: imageLogo!)
+            image.image = UIImage(data: imageData!)
+            
         }
     }
     

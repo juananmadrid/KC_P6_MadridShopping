@@ -25,19 +25,33 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yku-NU-Izt">
                                 <rect key="frame" x="41" y="159" width="307" height="313"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xi4-GC-J6M">
-                                <rect key="frame" x="149" y="515" width="91" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upK-2L-x7L">
+                                <rect key="frame" x="149" y="579" width="91" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="91" id="KJH-sK-oQh"/>
-                                    <constraint firstAttribute="height" constant="30" id="LBC-ls-Utc"/>
+                                    <constraint firstAttribute="width" constant="91" id="7Xe-Kg-r9a"/>
+                                    <constraint firstAttribute="height" constant="30" id="aho-f2-6hF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <state key="normal" title="GO !!">
                                     <color key="titleColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="goButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8sH-2V-qhv"/>
+                                    <segue destination="Utn-hc-hjt" kind="show" identifier="ShopViewControllerSegue" id="gwB-zY-PGP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xi4-GC-J6M">
+                                <rect key="frame" x="92" y="513" width="204" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="KJH-sK-oQh"/>
+                                    <constraint firstAttribute="height" constant="30" id="LBC-ls-Utc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Download Shops !!">
+                                    <color key="titleColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
                                     <action selector="goButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AtJ-VE-B57"/>
-                                    <segue destination="Utn-hc-hjt" kind="show" identifier="ShopViewControllerSegue" id="kfY-XR-uPg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -47,6 +61,8 @@
                             <constraint firstItem="yku-NU-Izt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MjL-WK-H3j"/>
                             <constraint firstItem="xi4-GC-J6M" firstAttribute="top" secondItem="yku-NU-Izt" secondAttribute="bottom" constant="75" id="ZyE-cU-kGh"/>
                             <constraint firstItem="yku-NU-Izt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="83" id="bR1-RE-tvn"/>
+                            <constraint firstItem="upK-2L-x7L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dGQ-Z6-A8c"/>
+                            <constraint firstItem="upK-2L-x7L" firstAttribute="top" secondItem="xi4-GC-J6M" secondAttribute="bottom" constant="32" id="urZ-vb-TjY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oeI-LR-HFl"/>
@@ -90,8 +106,12 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m43-uQ-aLG">
                                                     <rect key="frame" x="0.0" y="5" width="375" height="59"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ITE-Uo-SN4">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ITE-Uo-SN4">
                                                     <rect key="frame" x="8" y="8" width="62" height="54"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="54" id="1lO-I8-8u5"/>
+                                                        <constraint firstAttribute="width" constant="62" id="4rC-OS-JoL"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2R-OW-nYk">
                                                     <rect key="frame" x="87" y="25" width="269" height="22"/>
@@ -175,6 +195,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kfY-XR-uPg"/>
+        <segue reference="gwB-zY-PGP"/>
     </inferredMetricsTieBreakers>
 </document>

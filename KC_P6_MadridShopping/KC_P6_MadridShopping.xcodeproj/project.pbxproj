@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		580473271EC5EB50001D9FB6 /* AppLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 580473261EC5EB50001D9FB6 /* AppLogo.png */; };
 		5822F6931EC77F4700A7E815 /* ShopController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5822F6921EC77F4700A7E815 /* ShopController+UICollectionView.swift */; };
+		5840849D1EC8727700C94D9F /* IconDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 5840849C1EC8727700C94D9F /* IconDefault.png */; };
+		5840849F1EC8773300C94D9F /* BackgroundDefault.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5840849E1EC8773300C94D9F /* BackgroundDefault.jpg */; };
 		5850547B1EC7182800A48DA7 /* LoadDataFromJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5850547A1EC7182800A48DA7 /* LoadDataFromJson.swift */; };
 		5850547D1EC7271F00A48DA7 /* DownloadImageManager .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5850547C1EC7271F00A48DA7 /* DownloadImageManager .swift */; };
 		5850547F1EC773A000A48DA7 /* ShopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5850547E1EC773A000A48DA7 /* ShopController.swift */; };
@@ -30,6 +32,8 @@
 /* Begin PBXFileReference section */
 		580473261EC5EB50001D9FB6 /* AppLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppLogo.png; sourceTree = "<group>"; };
 		5822F6921EC77F4700A7E815 /* ShopController+UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ShopController+UICollectionView.swift"; sourceTree = "<group>"; };
+		5840849C1EC8727700C94D9F /* IconDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconDefault.png; sourceTree = "<group>"; };
+		5840849E1EC8773300C94D9F /* BackgroundDefault.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BackgroundDefault.jpg; sourceTree = "<group>"; };
 		5850547A1EC7182800A48DA7 /* LoadDataFromJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadDataFromJson.swift; sourceTree = "<group>"; };
 		5850547C1EC7271F00A48DA7 /* DownloadImageManager .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DownloadImageManager .swift"; sourceTree = "<group>"; };
 		5850547E1EC773A000A48DA7 /* ShopController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopController.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				58DE18521EC5A09B0017ADA4 /* Views */,
 				58DE18431EC59C0C0017ADA4 /* Assets.xcassets */,
 				580473261EC5EB50001D9FB6 /* AppLogo.png */,
+				5840849E1EC8773300C94D9F /* BackgroundDefault.jpg */,
+				5840849C1EC8727700C94D9F /* IconDefault.png */,
 				58DE18481EC59C0C0017ADA4 /* Info.plist */,
 				58DE18401EC59C0C0017ADA4 /* KC_P6_MadridShopping.xcdatamodeld */,
 			);
@@ -220,7 +226,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				580473271EC5EB50001D9FB6 /* AppLogo.png in Resources */,
+				5840849F1EC8773300C94D9F /* BackgroundDefault.jpg in Resources */,
 				58DE18471EC59C0C0017ADA4 /* LaunchScreen.storyboard in Resources */,
+				5840849D1EC8727700C94D9F /* IconDefault.png in Resources */,
 				58DE18441EC59C0C0017ADA4 /* Assets.xcassets in Resources */,
 				58DE183F1EC59C0C0017ADA4 /* Main.storyboard in Resources */,
 			);

@@ -40,11 +40,10 @@ public func uploadShop(dict: JsonDictionary, context: NSManagedObjectContext) th
     // Descargamos imagenes
     
     downloadImage(urlString: urlString_image, completion: { (image) in
+        let img = NSData(data: UIImageJPEGRepresentation(image, 0.3)!)
         
-        let img = image
-        
-        downloadImage(urlString: urlString_logo, completion: { (logo) in
-            let img_logo = logo
+        downloadImage(urlString: urlString_logo, completion: { (image) in
+            let img_logo = NSData(data: UIImageJPEGRepresentation(image, 0.2)!)
             
             // Cargamos datos en Core Data
             let shop = Shop(context: context)
@@ -55,10 +54,8 @@ public func uploadShop(dict: JsonDictionary, context: NSManagedObjectContext) th
             shop.gps_lat = gps_lat
             shop.description_es = description_es
             shop.description_en = description_en
-            shop.image = img
-            shop.logo = img_logo
-            
-            
+            shop.img_back = img
+            shop.img_logo = img_logo
             
         })
     })
