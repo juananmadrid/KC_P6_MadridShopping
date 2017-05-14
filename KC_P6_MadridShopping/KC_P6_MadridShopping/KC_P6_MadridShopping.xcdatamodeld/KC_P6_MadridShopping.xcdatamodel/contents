@@ -7,8 +7,8 @@
         <attribute name="gps_lat" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="gps_lon" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" attributeType="String" syncable="YES"/>
-        <attribute name="img_back" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="img_logo" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="image_back" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="image_logo" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
     </entity>
     <elements>

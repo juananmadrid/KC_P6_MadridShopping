@@ -18,9 +18,7 @@ class ShopAPIManager {
                     let data = try Data(contentsOf: url)
                     let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as!Dictionary<String, Any>
                     
-                    let jsonArray = json["result"]! as! JsonArray
-                    
-                    self.flagShopsDownloadEnd(true)
+                    let jsonArray = json["result"]! as! JsonArray                    
                     
                     DispatchQueue.main.async {
                         completion(jsonArray)
@@ -38,10 +36,6 @@ class ShopAPIManager {
         
     }
     
-    func flagShopsDownloadEnd(_ flag: Bool){
-        let defaults = UserDefaults.standard
-        defaults.set(flag, forKey: "ShopsDownloadEnd")
-    }
     
         
 }

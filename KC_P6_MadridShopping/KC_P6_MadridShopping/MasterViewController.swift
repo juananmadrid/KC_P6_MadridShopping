@@ -3,8 +3,6 @@ import CoreData
 
 
 class MasterViewController: UIViewController {
-
-    // MARK: - Properties
     
     // Inyecto contexto desde AppDelegate
     var context: NSManagedObjectContext?
@@ -24,48 +22,39 @@ class MasterViewController: UIViewController {
 
     @IBAction func goButton(_ sender: Any) {
         
-        guard let context = self.context else { return }
-        
         let defaults = UserDefaults.standard
         let downloadEndFlag = defaults.bool(forKey: "ShopsDownloadEnd")
         
-        /// flag en Desarrollo
-        if downloadEndFlag { }
-        // defaults.set(false, forKey: "ShopsDownloadEnd")
+        // Flag para no descargar si ya está descargado antes
+         if !downloadEndFlag {
         
-        ShopsInteractor().execute(completion: { (jsonArray: JsonArray) in
-            
-            // Cargamos datos en CORE DATA
-            do{
-                try uploadJson(jsonArray: jsonArray, context: self.context!)
-            } catch {
-                print("Error cargando Json. \(error)")
-            }
-            
-        })
+            ShopsInteractor().execute(completion: { (jsonArray: JsonArray) in
+                
+                // Cargamos datos en CORE DATA
+                do{
+                    try uploadJson(jsonArray: jsonArray, context: self.context!)
+                } catch {
+                    print("Error cargando Json. \(error)")
+                }
+                
+                self.performSegue(withIdentifier: "ShopViewControllerSegue", sender: sender)
+            })
+        
+         }
         
     }
     
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        let defaults = UserDefaults.standard
-        let downloadEndFlag = defaults.bool(forKey: "ShopsDownloadEnd")
-        
-        if downloadEndFlag {
-            
-        } else {
-            print("Datos no cargados en Core Data")
-        }
-        
+                
         if let identifier = segue.identifier {
             if identifier == "ShopViewControllerSegue" {
                 let vc = segue.destination as! ShopController
                 vc.context = self.context
             }
             
-           
         }
+        
     }
     
     
